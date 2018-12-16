@@ -11,8 +11,8 @@ client.on('ready', () => {
 });
 
 client.on('message', msg => {
-  if (msg.content === config.commandPrefix + 'check') {
-    require('./commands/check.js')(msg);
+  if (msg.content.startsWith(config.commandPrefix + 'check')) {
+    require('./commands/check.js')(msg, config);
   }
 });
 

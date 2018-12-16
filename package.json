@@ -1,0 +1,23 @@
+{
+  "name": "battlefychecker",
+  "version": "0.0.1",
+  "description": "A Discord Bot to gather information from a team's battlefy page",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JoshB2699/battlefyChecker.git"
+  },
+  "keywords": [
+    "npm",
+    "discordjs"
+  ],
+  "author": "Joshb2699",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JoshB2699/battlefyChecker/issues"
+  },
+  "homepage": "https://github.com/JoshB2699/battlefyChecker#readme"
+}

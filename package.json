@@ -1,6 +1,6 @@
 {
   "name": "battlefychecker",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "A Discord Bot to gather information from a team's battlefy page",
   "main": "index.js",
   "scripts": {

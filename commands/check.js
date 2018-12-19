@@ -5,7 +5,7 @@ module.exports = function(msg, config) {
 
   var team_url = msg.content.replace(config.commandPrefix + "check ", "");
 
-  console.log("Searching for team at: " + team_url)
+  msg.channel.send("Searching for team at: " + team_url)
 
   puppeteer
     .launch()
@@ -46,11 +46,14 @@ module.exports = function(msg, config) {
 
       await processTags(tags)
 
+      sr.sort((a, b) => a - b);
+
       var min = Math.min(...sr),
       max = Math.max(...sr),
-      avg = sr.reduce((a, b) => a += b)/sr.length;
+      avg = (sr.reduce((a, b) => a += b)/sr.length).toFixed(0),
+      median =  (sr[(sr.length - 1) >> 1] + sr[sr.length >> 1]) / 2
 
-      msg.channel.send('Average SR: ' + avg + '\nMaximum SR: ' + max + '\nMinimum SR: ' + min)
+      msg.channel.send('Mean SR: ' + avg + '\nMedian SR: ' + median + '\nMaximum SR: ' + max + '\nMinimum SR: ' + min + '\nSR Values: ' + sr)
     })
     .catch(function(err) {
       //handle error
